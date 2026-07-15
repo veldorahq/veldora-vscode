@@ -1,9 +1,10 @@
 # VS Code Extension — Veldora Language Support
 
 node_modules/
-*.vsix
 .vscode-test/
 out/
 dist/
 .DS_Store
 Thumbs.db
+
+# Keep *.vsix in the repo — users download it directly from GitHub releases
