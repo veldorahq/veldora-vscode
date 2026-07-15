@@ -1,0 +1,39 @@
+Veldora Language Support — v0.1.0
+==================================
+Released: 2026-07-13
+Phase:    2 (Template Engine)
+
+WHAT'S INCLUDED
+---------------
+  File: veldora-vscode-0.1.0.vsix
+  Size: ~3.3 KB
+
+HOW TO INSTALL
+--------------
+  code --install-extension veldora-vscode-0.1.0.vsix
+
+CHANGES IN THIS VERSION
+-----------------------
+  [+] Initial release of Veldora Language Support
+  [+] Syntax highlighting for .veldora.php and .veldora files
+      - Escaped output:  {{ $expression }}
+      - Raw output:      {!! $expression !!}
+      - Comments:        {{-- hidden --}}
+      - Directives:      @if, @foreach, @extends, @section, @yield
+  [+] Language configuration
+      - Bracket auto-close and pairing
+      - Comment toggling (Ctrl+/)
+  [+] Snippets (7 prefixes)
+      v-if       →  @if ... @endif
+      v-foreach  →  @foreach ... @endforeach
+      v-section  →  @section ... @endsection
+      v-yield    →  @yield('name')
+      v-extends  →  @extends('layout')
+      v-comp     →  <x-component> ... </x-component>
+      v-esc      →  {{ $variable }}
+
+REQUIREMENTS
+------------
+  VS Code ^1.60.0
+  PHP 8.2+
+  Veldora Framework (Phase 2+)

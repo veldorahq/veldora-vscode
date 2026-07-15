@@ -1,0 +1,48 @@
+Veldora Language Support — v0.2.0
+==================================
+Released: 2026-07-15
+Phase:    3 (Security & Authentication)
+
+WHAT'S INCLUDED
+---------------
+  File: veldora-vscode-0.2.0.vsix
+  Size: ~6.5 KB
+
+HOW TO INSTALL
+--------------
+  code --install-extension veldora-vscode-0.2.0.vsix
+
+CHANGES IN THIS VERSION
+-----------------------
+  [+] 10 new snippets for Phase 3 auth/security directives
+      v-csrf    →  @csrf
+      v-auth    →  @auth ... @endauth
+      v-guest   →  @guest ... @endguest
+      v-admin   →  @admin ... @endadmin
+      v-unless  →  @unless ... @endunless
+      v-forelse →  @forelse ... @empty ... @endforelse
+      v-for     →  @for ... @endfor
+      v-while   →  @while ... @endwhile
+      v-php     →  @php ... @endphp
+      v-dump    →  @dump($var)
+
+  [+] Updated syntax grammar
+      - Highlights @csrf, @auth, @endauth, @guest, @endguest as keywords
+      - Highlights @admin, @endadmin for admin-only blocks
+      - Highlights @php, @endphp, @dump as special PHP blocks
+      - Highlights @unless, @endunless, @forelse, @endforelse, @empty
+
+  [+] Production-ready README.md with badges and snippet reference table
+  [+] MIT LICENSE file added
+  [+] repository field added to package.json (Marketplace ready)
+
+REQUIREMENTS
+------------
+  VS Code ^1.60.0
+  PHP 8.2+
+  Veldora Framework (Phase 3+)
+
+UPGRADE FROM v0.1.0
+-------------------
+  Simply install the new .vsix — it replaces the previous version.
+  code --install-extension veldora-vscode-0.2.0.vsix
