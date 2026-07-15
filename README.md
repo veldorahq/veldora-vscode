@@ -11,15 +11,10 @@ Syntax Highlighting • IntelliSense Snippets • File Icons • Language Config
 <br>
 
 [![Release](https://img.shields.io/github/v/release/veldorahq/veldora-vscode?style=flat-square)](https://github.com/veldorahq/veldora-vscode/releases)
-
 [![Downloads](https://img.shields.io/github/downloads/veldorahq/veldora-vscode/total?style=flat-square)](https://github.com/veldorahq/veldora-vscode/releases)
-
 [![Stars](https://img.shields.io/github/stars/veldorahq/veldora-vscode?style=flat-square)](https://github.com/veldorahq/veldora-vscode/stargazers)
-
 [![Issues](https://img.shields.io/github/issues/veldorahq/veldora-vscode?style=flat-square)](https://github.com/veldorahq/veldora-vscode/issues)
-
 [![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?style=flat-square&logo=php&logoColor=white)](https://php.net)
-
 [![License](https://img.shields.io/github/license/veldorahq/veldora-vscode?style=flat-square)](LICENSE)
 
 </div>
