@@ -4,9 +4,11 @@
 
 **Syntax highlighting, snippets, and bracket matching for Veldora PHP template files.**
 
-[![Version](https://img.shields.io/badge/version-0.2.0-7c3aed?style=flat-square)](https://github.com/veldora/veldora-vscode)
+[![Version](https://img.shields.io/badge/version-0.4.1-7c3aed?style=flat-square)](https://github.com/veldorahq/veldora-vscode/releases)
+[![VS Code](https://img.shields.io/badge/VS_Code-Extension-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/)
+[![Language](https://img.shields.io/badge/Language-Veldora-7c3aed?style=flat-square)](https://github.com/veldorahq/veldora)
+[![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?style=flat-square&logo=php&logoColor=white)](https://php.net)
 [![License](https://img.shields.io/badge/license-MIT-gray?style=flat-square)](LICENSE)
-[![PHP](https://img.shields.io/badge/PHP-8.2+-7c3aed?style=flat-square&logo=php&logoColor=white)](https://php.net)
 
 </div>
 
