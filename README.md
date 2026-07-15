@@ -1,12 +1,18 @@
 <div align="center">
 
+<img src="images/v-icon.png" width="128" alt="Veldora Logo">
+
 # Veldora Language Support
 
-**Syntax highlighting, snippets, and bracket matching for Veldora PHP template files.**
+**Official Visual Studio Code extension for the Veldora PHP Framework.**
 
-[![Version](https://img.shields.io/badge/version-0.4.1-7c3aed?style=flat-square)](https://github.com/veldorahq/veldora-vscode/releases)
-[![VS Code](https://img.shields.io/badge/VS_Code-Extension-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/)
-[![Language](https://img.shields.io/badge/Language-Veldora-7c3aed?style=flat-square)](https://github.com/veldorahq/veldora)
+Syntax Highlighting • IntelliSense Snippets • File Icons • Language Configuration • Bracket Matching
+
+<br>
+
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/veldora.veldora-vscode?style=flat-square&logo=visualstudiocode&color=7c3aed)](https://marketplace.visualstudio.com/items?itemName=veldora.veldora-vscode)
+[![Downloads](https://img.shields.io/visual-studio-marketplace/d/veldora.veldora-vscode?style=flat-square&color=7c3aed)](https://marketplace.visualstudio.com/items?itemName=veldora.veldora-vscode)
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/veldora.veldora-vscode?style=flat-square&color=7c3aed)](https://marketplace.visualstudio.com/items?itemName=veldora.veldora-vscode)
 [![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?style=flat-square&logo=php&logoColor=white)](https://php.net)
 [![License](https://img.shields.io/badge/license-MIT-gray?style=flat-square)](LICENSE)
 
@@ -14,110 +20,234 @@
 
 ---
 
-## What is Veldora?
+# What is Veldora?
 
-[Veldora](https://github.com/veldora/veldora-core) is a modern PHP framework built around a clean MVC architecture, a Blade-inspired template engine, a guard-based authentication system, and a CLI scaffolding toolkit — designed to be fully owned by the developer.
+[Veldora](https://github.com/veldorahq/veldora) is a modern PHP framework focused on clean architecture, expressive syntax, built-in tooling, and an enjoyable developer experience.
 
-This extension adds first-class editor support for `.veldora.php` and `.veldora` template files.
+The Veldora ecosystem includes:
 
----
+- Framework Core
+- UI Component Library
+- CLI Tooling
+- Documentation Website
+- Visual Studio Code Extension
 
-## Features
-
-### ✦ Syntax Highlighting
-
-Full TextMate grammar covering all Veldora template syntax:
-
-- **Escaped output** — `{{ $expression }}` highlighted as embedded PHP
-- **Raw output** — `{!! $raw !!}` highlighted separately
-- **Template comments** — `{{-- hidden --}}` grayed out as block comments
-- **Control directives** — `@if`, `@foreach`, `@auth`, `@csrf`, `@php`, and more highlighted as keywords
-- **Component tags** — `<x-tag>`, `<x-slot>` highlighted as custom elements
-
-### ✦ Snippets
-
-17 smart snippets auto-complete the most common Veldora patterns. All snippets use tab stops and placeholders.
-
-### ✦ Language Configuration
-
-Correct bracket pairing, auto-close behavior, and comment toggling for Veldora template syntax.
+This extension provides first-class editor support for Veldora template files.
 
 ---
 
-## Snippet Reference
+# Features
 
-Type the prefix and press `Tab` to expand.
+## ✦ Syntax Highlighting
 
-| Prefix | Expands To | Description |
-|---|---|---|
-| `v-if` | `@if ... @endif` | Conditional block |
-| `v-foreach` | `@foreach ... @endforeach` | Foreach loop |
-| `v-forelse` | `@forelse ... @empty ... @endforelse` | Loop with empty fallback |
-| `v-unless` | `@unless ... @endunless` | Inverse conditional |
-| `v-for` | `@for ... @endfor` | Classic for loop |
-| `v-while` | `@while ... @endwhile` | While loop |
-| `v-php` | `@php ... @endphp` | Inline PHP block |
-| `v-csrf` | `@csrf` | Hidden CSRF input |
-| `v-auth` | `@auth ... @endauth` | Show only to logged-in users |
-| `v-guest` | `@guest ... @endguest` | Show only to guests |
-| `v-admin` | `@admin ... @endadmin` | Show only to admins |
-| `v-dump` | `@dump($var)` | Debug variable dump |
-| `v-extends` | `@extends('layout')` | Extend a layout |
-| `v-section` | `@section('name') ... @endsection` | Define a layout section |
-| `v-yield` | `@yield('name')` | Output a layout section |
-| `v-comp` | `<x-component> ... </x-component>` | Custom component block |
-| `v-esc` | `{{ $variable }}` | Escaped output |
+Complete TextMate grammar with embedded PHP support.
+
+Supports:
+
+- Escaped output — `{{ }}`
+- Raw output — `{!! !!}`
+- Template comments — `{{-- --}}`
+- Blade-inspired directives
+- UI Components (`<x-button>`, `<x-card>`, etc.)
+- Embedded PHP
+- Control structures
+- Authentication directives
 
 ---
 
-## Supported File Extensions
+## ✦ Smart IntelliSense Snippets
 
-| Extension | Description |
-|---|---|
-| `.veldora.php` | Primary template extension |
-| `.veldora` | Alternative short extension |
+More than **30 snippets** are included to speed up development.
+
+Categories include:
+
+- Template directives
+- Authentication
+- CSRF
+- Layouts
+- Components
+- UI Components
 
 ---
 
-## Installation
+## ✦ File Icons
 
-### From VSIX (recommended for local development)
+Recognizes Veldora projects with custom icons for:
 
-```bash
-# Build from source
-cd veldora-vscode
-npx @vscode/vsce package --no-dependencies
+- `.veldora`
+- `.veldora.php`
+- `.env`
+- `web.php`
+- `api.php`
+- `routes.php`
+- `veldora-core`
+- `veldora-ui`
+- `veldora-vscode`
 
-# Install into VS Code
-code --install-extension veldora-vscode-0.2.0.vsix
+---
+
+## ✦ Language Configuration
+
+Includes:
+
+- Auto-closing brackets
+- Auto indentation
+- Comment toggling
+- Bracket matching
+- Embedded PHP parsing
+
+---
+
+# Snippet Reference
+
+Type a prefix and press **Tab**.
+
+| Prefix | Description |
+|---------|-------------|
+| `v-if` | Conditional block |
+| `v-foreach` | Foreach loop |
+| `v-forelse` | Foreach with empty state |
+| `v-unless` | Inverse conditional |
+| `v-for` | For loop |
+| `v-while` | While loop |
+| `v-php` | PHP block |
+| `v-csrf` | CSRF directive |
+| `v-auth` | Auth block |
+| `v-guest` | Guest block |
+| `v-admin` | Admin block |
+| `v-dump` | Dump helper |
+| `v-extends` | Extend layout |
+| `v-section` | Section block |
+| `v-yield` | Yield section |
+| `v-comp` | Component block |
+| `v-esc` | Escaped output |
+
+---
+
+# UI Component Snippets
+
+| Prefix | Component |
+|---------|-----------|
+| `vc-button` | Button |
+| `vc-input` | Input |
+| `vc-textarea` | Textarea |
+| `vc-select` | Select |
+| `vc-checkbox` | Checkbox |
+| `vc-radio` | Radio |
+| `vc-badge` | Badge |
+| `vc-alert` | Alert |
+| `vc-card` | Card |
+| `vc-modal` | Modal |
+| `vc-spinner` | Spinner |
+| `vc-avatar` | Avatar |
+| `vc-dropdown` | Dropdown |
+| `vc-navbar` | Navbar |
+| `vc-toast` | Toast |
+
+---
+
+# Supported File Types
+
+| File | Supported |
+|------|-----------|
+| `.veldora.php` | ✔ |
+| `.veldora` | ✔ |
+
+---
+
+# Installation
+
+## Visual Studio Code Marketplace (Recommended)
+
+Search for:
+
+```
+Veldora Language Support
 ```
 
-### From VS Code Marketplace
-> Coming soon — will be published when the framework reaches public release.
+or install directly:
+
+https://marketplace.visualstudio.com/items?itemName=veldora.veldora-vscode
 
 ---
 
-## Version History
+## Command Line
 
-### `0.2.0` — Phase 3: Security & Auth Directives
-- Added snippets: `v-csrf`, `v-auth`, `v-guest`, `v-admin`, `v-unless`, `v-forelse`, `v-for`, `v-while`, `v-php`, `v-dump`
-- Updated syntax grammar to highlight all new Phase 3 control keywords
-- Added this `README.md`
+```bash
+code --install-extension veldora.veldora-vscode
+```
 
-### `0.1.0` — Phase 2: Template Engine Launch
+---
+
+## Manual (.vsix)
+
+```bash
+git clone https://github.com/veldorahq/veldora-vscode
+
+cd veldora-vscode
+
+npm install
+
+npx @vscode/vsce package --no-dependencies
+
+code --install-extension veldora-vscode-0.5.0.vsix
+```
+
+---
+
+# Version History
+
+## 0.5.0
+
+- Published on Visual Studio Code Marketplace
+- Added official Marketplace branding
+- Added custom extension icon
+- Added Marketplace banner
+- Added file icons
+- Improved extension metadata
+- Updated documentation
+
+## 0.4.1
+
+- Added Veldora File Icon Theme
+- Improved syntax grammar
+- Updated extension packaging
+
+## 0.3.0
+
+- Added 15 UI Component snippets
+- Improved registry support
+
+## 0.2.0
+
+- Added authentication snippets
+- Added CSRF directive
+- Added new template directives
+
+## 0.1.0
+
 - Initial release
-- Syntax highlighting for `{{ }}`, `{!! !!}`, `{{-- --}}`, and core directives
-- Basic snippets: `v-if`, `v-foreach`, `v-section`, `v-yield`, `v-extends`, `v-comp`, `v-esc`
-- Language configuration with bracket matching
+- Syntax highlighting
+- Blade-inspired directives
+- Basic snippets
+- Language configuration
 
 ---
 
-## Contributing
+# Contributing
 
-This extension lives inside the main [veldora](https://github.com/veldora/veldora) monorepo under `/veldora-vscode`. The grammar file is `syntaxes/veldora.tmLanguage.json` and snippets live in `snippets/snippets.json`.
+Contributions are welcome.
+
+Issues, pull requests, feature ideas, and bug reports can be submitted through GitHub.
+
+Repository:
+
+https://github.com/veldorahq/veldora-vscode
 
 ---
 
-## License
+# License
 
-MIT — see [LICENSE](LICENSE) for details.
+Released under the MIT License.
+
+See [LICENSE](LICENSE) for more information.
