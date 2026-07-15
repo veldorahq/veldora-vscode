@@ -1,0 +1,51 @@
+{
+    "name": "veldora-vscode",
+    "displayName": "Veldora Language Support",
+    "description": "Syntax highlighting, language configuration, and code snippets for Veldora (.veldora.php and .veldora) views.",
+    "version": "0.2.0",
+    "publisher": "veldora",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/veldorahq/veldora"
+    },
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "veldora",
+                "aliases": [
+                    "Veldora",
+                    "veldora"
+                ],
+                "extensions": [
+                    ".veldora",
+                    ".veldora.php"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "veldora",
+                "scopeName": "text.html.veldora",
+                "path": "./syntaxes/veldora.tmLanguage.json",
+                "embeddedLanguages": {
+                    "text.html.derivative": "html",
+                    "source.php.embedded.block.html": "php"
+                }
+            }
+        ],
+        "snippets": [
+            {
+                "language": "veldora",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,147 @@
+{
+    "Veldora If Statement": {
+        "prefix": "v-if",
+        "body": [
+            "@if (${1:\\$condition})",
+            "\t$0",
+            "@endif"
+        ],
+        "description": "Veldora @if directive"
+    },
+    "Veldora Foreach Statement": {
+        "prefix": "v-foreach",
+        "body": [
+            "@foreach (${1:\\$items} as ${2:\\$item})",
+            "\t$0",
+            "@endforeach"
+        ],
+        "description": "Veldora @foreach directive"
+    },
+    "Veldora Yield Section": {
+        "prefix": "v-yield",
+        "body": [
+            "@yield('${1:content}')"
+        ],
+        "description": "Veldora @yield directive"
+    },
+    "Veldora Extends": {
+        "prefix": "v-extends",
+        "body": [
+            "@extends('${1:layouts.main}')"
+        ],
+        "description": "Veldora @extends directive"
+    },
+    "Veldora Section": {
+        "prefix": "v-section",
+        "body": [
+            "@section('${1:content}')",
+            "\t$0",
+            "@endsection"
+        ],
+        "description": "Veldora @section directive"
+    },
+    "Veldora Escape": {
+        "prefix": "v-esc",
+        "body": [
+            "{{ ${1:\\$var} }}"
+        ],
+        "description": "Veldora {{ }} variable output"
+    },
+    "Veldora Component": {
+        "prefix": "v-comp",
+        "body": [
+            "<x-${1:component}>",
+            "\t$0",
+            "</x-$1>"
+        ],
+        "description": "Veldora custom component tag"
+    },
+    "Veldora CSRF Field": {
+        "prefix": "v-csrf",
+        "body": [
+            "@csrf"
+        ],
+        "description": "Veldora @csrf field helper"
+    },
+    "Veldora Auth Block": {
+        "prefix": "v-auth",
+        "body": [
+            "@auth",
+            "\t$0",
+            "@endauth"
+        ],
+        "description": "Veldora @auth middleware conditional block"
+    },
+    "Veldora Guest Block": {
+        "prefix": "v-guest",
+        "body": [
+            "@guest",
+            "\t$0",
+            "@endguest"
+        ],
+        "description": "Veldora @guest middleware conditional block"
+    },
+    "Veldora Admin Block": {
+        "prefix": "v-admin",
+        "body": [
+            "@admin",
+            "\t$0",
+            "@endadmin"
+        ],
+        "description": "Veldora @admin conditional block"
+    },
+    "Veldora Unless Statement": {
+        "prefix": "v-unless",
+        "body": [
+            "@unless (${1:\\$condition})",
+            "\t$0",
+            "@endunless"
+        ],
+        "description": "Veldora @unless directive"
+    },
+    "Veldora Forelse Statement": {
+        "prefix": "v-forelse",
+        "body": [
+            "@forelse (${1:\\$items} as ${2:\\$item})",
+            "\t$0",
+            "@empty",
+            "\t",
+            "@endforelse"
+        ],
+        "description": "Veldora @forelse loop with empty fallback"
+    },
+    "Veldora For Loop": {
+        "prefix": "v-for",
+        "body": [
+            "@for (${1:\\$i = 0}; ${2:\\$i < \\$count}; ${3:\\$i++})",
+            "\t$0",
+            "@endfor"
+        ],
+        "description": "Veldora @for loop"
+    },
+    "Veldora While Loop": {
+        "prefix": "v-while",
+        "body": [
+            "@while (${1:\\$condition})",
+            "\t$0",
+            "@endwhile"
+        ],
+        "description": "Veldora @while loop"
+    },
+    "Veldora PHP Block": {
+        "prefix": "v-php",
+        "body": [
+            "@php",
+            "\t$0",
+            "@endphp"
+        ],
+        "description": "Veldora inline PHP tag block"
+    },
+    "Veldora Dump Expression": {
+        "prefix": "v-dump",
+        "body": [
+            "@dump(${1:\\$var})"
+        ],
+        "description": "Veldora @dump expression debugger"
+    }
+}
