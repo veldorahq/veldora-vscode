@@ -143,5 +143,118 @@
             "@dump(${1:\\$var})"
         ],
         "description": "Veldora @dump expression debugger"
+    },
+    "Veldora UI Button": {
+        "prefix": "vc-button",
+        "body": [
+            "<x-button variant=\"${1:primary}\" size=\"${2:md}\">${3:Click me}</x-button>"
+        ],
+        "description": "Veldora UI button component"
+    },
+    "Veldora UI Input": {
+        "prefix": "vc-input",
+        "body": [
+            "<x-input name=\"${1:field}\" label=\"${2:Label}\" type=\"${3:text}\" error=\"${4:\\$errors['$1'] ?? null}\" />"
+        ],
+        "description": "Veldora UI input field"
+    },
+    "Veldora UI Textarea": {
+        "prefix": "vc-textarea",
+        "body": [
+            "<x-textarea name=\"${1:field}\" label=\"${2:Label}\" error=\"${3:\\$errors['$1'] ?? null}\" />"
+        ],
+        "description": "Veldora UI textarea field"
+    },
+    "Veldora UI Select": {
+        "prefix": "vc-select",
+        "body": [
+            "<x-select name=\"${1:field}\" label=\"${2:Label}\" :options=\"${3:\\$options}\" selected=\"${4:\\$selected}\" error=\"${5:\\$errors['$1'] ?? null}\" />"
+        ],
+        "description": "Veldora UI select dropdown"
+    },
+    "Veldora UI Checkbox": {
+        "prefix": "vc-checkbox",
+        "body": [
+            "<x-checkbox name=\"${1:field}\" label=\"${2:Label}\" checked=\"${3:\\$checked}\" error=\"${4:\\$errors['$1'] ?? null}\" />"
+        ],
+        "description": "Veldora UI checkbox toggle"
+    },
+    "Veldora UI Radio": {
+        "prefix": "vc-radio",
+        "body": [
+            "<x-radio name=\"${1:field}\" value=\"${2:value}\" label=\"${3:Label}\" checked=\"${4:\\$checked}\" />"
+        ],
+        "description": "Veldora UI radio select"
+    },
+    "Veldora UI Badge": {
+        "prefix": "vc-badge",
+        "body": [
+            "<x-badge variant=\"${1:success}\">${2:Active}</x-badge>"
+        ],
+        "description": "Veldora UI status badge"
+    },
+    "Veldora UI Alert": {
+        "prefix": "vc-alert",
+        "body": [
+            "<x-alert variant=\"${1:success}\" title=\"${2:Title}\">${3:Message}</x-alert>"
+        ],
+        "description": "Veldora UI alert notification box"
+    },
+    "Veldora UI Card": {
+        "prefix": "vc-card",
+        "body": [
+            "<x-card title=\"${1:Card Title}\">",
+            "\t${2:<p>Card content</p>}",
+            "</x-card>"
+        ],
+        "description": "Veldora UI layout card"
+    },
+    "Veldora UI Modal": {
+        "prefix": "vc-modal",
+        "body": [
+            "<x-modal id=\"${1:modal-id}\" title=\"${2:Modal Title}\">",
+            "\t${3:<p>Modal content</p>}",
+            "</x-modal>"
+        ],
+        "description": "Veldora UI dialog modal"
+    },
+    "Veldora UI Spinner": {
+        "prefix": "vc-spinner",
+        "body": [
+            "<x-spinner size=\"${1:md}\" />"
+        ],
+        "description": "Veldora UI loading spinner"
+    },
+    "Veldora UI Avatar": {
+        "prefix": "vc-avatar",
+        "body": [
+            "<x-avatar src=\"${1:\\$user->avatar}\" name=\"${2:\\$user->name}\" size=\"${3:md}\" />"
+        ],
+        "description": "Veldora UI avatar thumbnail"
+    },
+    "Veldora UI Dropdown": {
+        "prefix": "vc-dropdown",
+        "body": [
+            "<x-dropdown label=\"${1:Dropdown}\">",
+            "\t<li><a href=\"#\">${2:Option 1}</a></li>",
+            "</x-dropdown>"
+        ],
+        "description": "Veldora UI dropdown select menu"
+    },
+    "Veldora UI Navbar": {
+        "prefix": "vc-navbar",
+        "body": [
+            "<x-navbar brand=\"${1:Brand}\">",
+            "\t<a href=\"#\">${2:Home}</a>",
+            "</x-navbar>"
+        ],
+        "description": "Veldora UI main navigation bar"
+    },
+    "Veldora UI Toast": {
+        "prefix": "vc-toast",
+        "body": [
+            "<x-toast id=\"${1:toast-id}\" variant=\"${2:success}\" message=\"${3:Action completed!}\" />"
+        ],
+        "description": "Veldora UI auto-dismiss toast notification"
     }
 }

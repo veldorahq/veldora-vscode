@@ -1,0 +1,8 @@
+download/
+*.vsix
+.git/
+.vscode-test/
+out/
+dist/
+.DS_Store
+Thumbs.db

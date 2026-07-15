@@ -2,11 +2,11 @@
     "name": "veldora-vscode",
     "displayName": "Veldora Language Support",
     "description": "Syntax highlighting, language configuration, and code snippets for Veldora (.veldora.php and .veldora) views.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "publisher": "veldora",
     "repository": {
         "type": "git",
-        "url": "https://github.com/veldorahq/veldora"
+        "url": "https://github.com/veldorahq/veldora-vscode"
     },
     "engines": {
         "vscode": "^1.60.0"

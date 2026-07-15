@@ -1,0 +1,41 @@
+Veldora Language Support — v0.3.0
+==================================
+Released: 2026-07-15
+Phase:    4 (UI Component System)
+
+WHAT'S INCLUDED
+---------------
+  File: veldora-vscode-0.3.0.vsix
+  Size: ~7.5 KB
+
+HOW TO INSTALL
+--------------
+  code --install-extension veldora-vscode-0.3.0.vsix
+
+CHANGES IN THIS VERSION
+-----------------------
+  [+] Added 15 smart UI Component auto-complete snippets
+      vc-button   →  <x-button variant="primary" size="md">Click me</x-button>
+      vc-input    →  <x-input name="field" label="Label" type="text" />
+      vc-textarea →  <x-textarea name="field" label="Label" />
+      vc-select   →  <x-select name="field" label="Label" :options="$options" selected="$selected" />
+      vc-checkbox →  <x-checkbox name="field" label="Label" checked="$checked" />
+      vc-radio    →  <x-radio name="field" value="value" label="Label" checked="$checked" />
+      vc-badge    →  <x-badge variant="success">Active</x-badge>
+      vc-alert    →  <x-alert variant="success" title="Title">Message</x-alert>
+      vc-card     →  <x-card title="Card Title"><p>Card content</p></x-card>
+      vc-modal    →  <x-modal id="modal-id" title="Modal Title"><p>Modal content</p></x-modal>
+      vc-spinner  →  <x-spinner size="md" />
+      vc-avatar   →  <x-avatar src="$user->avatar" name="$user->name" size="md" />
+      vc-dropdown →  <x-dropdown label="Dropdown"><li><a href="#">Option 1</a></li></x-dropdown>
+      vc-navbar   →  <x-navbar brand="Brand"><a href="#">Home</a></x-navbar>
+      vc-toast    →  <x-toast id="toast-id" variant="success" message="Action completed!" />
+
+  [+] Added .vscodeignore file to optimize VSIX packaging size (reduced build redundancy)
+  [+] Updated repository field inside package.json to point to standalone extension repo
+
+REQUIREMENTS
+------------
+  VS Code ^1.60.0
+  PHP 8.2+
+  Veldora Framework (Phase 4+)
