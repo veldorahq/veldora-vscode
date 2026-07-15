@@ -1,28 +1,58 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "name": "Veldora Templates",
+    "scopeName": "text.html.veldora",
     "patterns": [
-        {
-            "include": "#comments"
-        },
-        {
-            "include": "#escapes"
-        },
-        {
-            "include": "#raws"
-        },
-        {
-            "include": "#directives"
-        },
-        {
-            "include": "#components"
-        },
-        {
-            "include": "text.html.basic"
-        }
+        { "include": "#php-block" },
+        { "include": "#php-short-echo" },
+        { "include": "#veldora-comment" },
+        { "include": "#veldora-raw-echo" },
+        { "include": "#veldora-echo" },
+        { "include": "#veldora-directives" },
+        { "include": "#veldora-components" },
+        { "include": "text.html.basic" }
     ],
     "repository": {
-        "comments": {
+
+        "php-block": {
+            "patterns": [
+                {
+                    "name": "meta.embedded.block.php",
+                    "begin": "<\\?(?:php|=)?",
+                    "beginCaptures": {
+                        "0": { "name": "punctuation.section.embedded.begin.php" }
+                    },
+                    "end": "\\?>",
+                    "endCaptures": {
+                        "0": { "name": "punctuation.section.embedded.end.php" }
+                    },
+                    "patterns": [
+                        { "include": "source.php" }
+                    ]
+                }
+            ]
+        },
+
+        "php-short-echo": {
+            "patterns": [
+                {
+                    "name": "meta.embedded.line.php",
+                    "begin": "<\\?=",
+                    "beginCaptures": {
+                        "0": { "name": "punctuation.section.embedded.begin.php" }
+                    },
+                    "end": "\\?>",
+                    "endCaptures": {
+                        "0": { "name": "punctuation.section.embedded.end.php" }
+                    },
+                    "patterns": [
+                        { "include": "source.php" }
+                    ]
+                }
+            ]
+        },
+
+        "veldora-comment": {
             "patterns": [
                 {
                     "name": "comment.block.veldora",
@@ -31,27 +61,8 @@
                 }
             ]
         },
-        "escapes": {
-            "patterns": [
-                {
-                    "name": "meta.expression.veldora",
-                    "begin": "\\{\\{",
-                    "beginCaptures": {
-                        "0": { "name": "punctuation.section.embedded.begin.veldora" }
-                    },
-                    "end": "\\}\\}",
-                    "endCaptures": {
-                        "0": { "name": "punctuation.section.embedded.end.veldora" }
-                    },
-                    "patterns": [
-                        {
-                            "include": "source.php"
-                        }
-                    ]
-                }
-            ]
-        },
-        "raws": {
+
+        "veldora-raw-echo": {
             "patterns": [
                 {
                     "name": "meta.expression.raw.veldora",
@@ -64,36 +75,70 @@
                         "0": { "name": "punctuation.section.embedded.end.veldora" }
                     },
                     "patterns": [
-                        {
-                            "include": "source.php"
-                        }
+                        { "include": "source.php" }
                     ]
                 }
             ]
         },
-        "directives": {
+
+        "veldora-echo": {
             "patterns": [
                 {
-                    "name": "keyword.control.veldora",
-                    "match": "@(if|elseif|else|endif|unless|endunless|foreach|endforeach|forelse|empty|endforelse|for|endfor|while|endwhile|php|endphp|csrf|auth|endauth|guest|endguest|admin|endadmin|dump|extends|section|endsection|yield|include)\\b"
+                    "name": "meta.expression.veldora",
+                    "begin": "\\{\\{",
+                    "beginCaptures": {
+                        "0": { "name": "punctuation.section.embedded.begin.veldora" }
+                    },
+                    "end": "\\}\\}",
+                    "endCaptures": {
+                        "0": { "name": "punctuation.section.embedded.end.veldora" }
+                    },
+                    "patterns": [
+                        { "include": "source.php" }
+                    ]
                 }
             ]
         },
-        "components": {
+
+        "veldora-directives": {
+            "patterns": [
+                {
+                    "comment": "Paired directives with parentheses arguments",
+                    "name": "keyword.control.veldora",
+                    "match": "@(if|elseif|unless|foreach|forelse|for|while|php|auth|guest|admin|dump|include|extends|section|yield|push|stack|component|slot|props)\\b"
+                },
+                {
+                    "comment": "Closing / standalone directives",
+                    "name": "keyword.control.veldora",
+                    "match": "@(else|endif|endunless|endforeach|empty|endforelse|endfor|endwhile|endphp|csrf|endauth|endguest|endadmin|endsection|endpush|endslot|endcomponent)\\b"
+                }
+            ]
+        },
+
+        "veldora-components": {
             "patterns": [
                 {
                     "name": "meta.tag.custom.veldora",
                     "begin": "</?x-[a-zA-Z0-9_\\-\\.]+",
+                    "beginCaptures": {
+                        "0": { "name": "entity.name.tag.veldora" }
+                    },
                     "end": "/?>",
+                    "endCaptures": {
+                        "0": { "name": "punctuation.definition.tag.end.veldora" }
+                    },
                     "patterns": [
                         {
                             "name": "entity.other.attribute-name.veldora",
-                            "match": "\\b[a-zA-Z0-9_\\-\\:]+="
+                            "match": "\\b[a-zA-Z0-9_\\-\\:]+(?==)"
                         },
                         {
                             "name": "string.quoted.double.veldora",
                             "begin": "\"",
-                            "end": "\""
+                            "end": "\"",
+                            "patterns": [
+                                { "include": "#veldora-echo" }
+                            ]
                         },
                         {
                             "name": "string.quoted.single.veldora",
@@ -104,6 +149,5 @@
                 }
             ]
         }
-    ],
-    "scopeName": "text.html.veldora"
+    }
 }

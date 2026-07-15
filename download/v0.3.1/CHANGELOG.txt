@@ -1,0 +1,12 @@
+## v0.3.1 — Syntax Highlighting Fix
+
+**Fixed**
+- `.veldora.php` files now correctly detected as Veldora language (was showing as plain text)
+- Added `filenamePatterns` matching for `*.veldora.php` — VS Code multi-part extension limitation workaround
+- Upgraded tmLanguage grammar to properly embed PHP blocks (`<?php ?>`, `<?= ?>`) with full PHP syntax coloring
+- Fixed `embeddedLanguages` scope names so PHP IntelliSense works inside Veldora templates
+- `@directives` now split into control-flow and closing groups for more accurate highlighting
+
+**Changed**
+- Grammar now includes PHP block embedding as top-level pattern (before HTML)
+- Veldora component attributes (`x-*`) now colored with correct TextMate scopes

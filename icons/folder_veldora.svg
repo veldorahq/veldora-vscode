@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- Folder — closed, violet accent -->
+  <path d="M2 6a2 2 0 0 1 2-2h4l2 2h10a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" fill="#2e1065"/>
+  <path d="M2 10h20" stroke="#6d28d9" stroke-width="1" opacity="0.4"/>
+  <!-- Lightning bolt inside folder -->
+  <path d="M12.5 12l-2 3h1.8l-0.3 2.5 2.5-3.5H12.7l0.3-2z" fill="#a78bfa"/>
+</svg>

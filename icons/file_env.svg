@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- .env icon — dark with green lock key -->
+  <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" fill="#052e16"/>
+  <path d="M13 2v7h7" fill="none" stroke="#16a34a" stroke-width="1.2"/>
+  <rect x="8.5" y="13" width="7" height="5" rx="1" fill="none" stroke="#4ade80" stroke-width="1.1"/>
+  <path d="M10 13v-1.5a2 2 0 0 1 4 0V13" fill="none" stroke="#4ade80" stroke-width="1.1" stroke-linecap="round"/>
+  <circle cx="12" cy="15.5" r="0.8" fill="#4ade80"/>
+</svg>

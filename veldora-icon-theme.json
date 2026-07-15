@@ -1,0 +1,46 @@
+{
+    "information_for_contributors": "Veldora Icon Theme — file/folder icons for the Veldora PHP framework",
+    "iconDefinitions": {
+        "_veldora_file": {
+            "iconPath": "./icons/file_veldora.svg"
+        },
+        "_routes_file": {
+            "iconPath": "./icons/file_routes.svg"
+        },
+        "_env_file": {
+            "iconPath": "./icons/file_env.svg"
+        },
+        "_folder_veldora": {
+            "iconPath": "./icons/folder_veldora.svg"
+        },
+        "_folder_veldora_open": {
+            "iconPath": "./icons/folder_veldora_open.svg"
+        }
+    },
+    "languageIds": {
+        "veldora": "_veldora_file"
+    },
+    "fileNames": {
+        "web.php": "_routes_file",
+        "api.php": "_routes_file",
+        "routes.php": "_routes_file",
+        ".env": "_env_file",
+        ".env.example": "_env_file",
+        ".env.local": "_env_file",
+        ".env.staging": "_env_file",
+        ".env.production": "_env_file",
+        ".env.testing": "_env_file"
+    },
+    "folderNames": {
+        "veldora-core": "_folder_veldora",
+        "veldora-ui": "_folder_veldora",
+        "veldora-vscode": "_folder_veldora",
+        "docs-site": "_folder_veldora"
+    },
+    "folderNamesExpanded": {
+        "veldora-core": "_folder_veldora_open",
+        "veldora-ui": "_folder_veldora_open",
+        "veldora-vscode": "_folder_veldora_open",
+        "docs-site": "_folder_veldora_open"
+    }
+}

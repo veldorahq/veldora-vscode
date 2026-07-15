@@ -1,0 +1,15 @@
+## v0.4.0 — File Icon Theme
+
+**New**
+- Added Veldora Icons file icon theme
+  - Activate via: File > Preferences > File Icon Theme > Veldora Icons
+  - *.veldora.php, *.veldora — violet lightning bolt file icon
+  - web.php, api.php, routes.php — blue route arrows icon
+  - .env, .env.* — green lock icon
+  - veldora-core/, veldora-ui/, veldora-vscode/ folders — violet Veldora folder icon (closed + open variants)
+- Added Themes to extension categories
+
+**How to Activate Icons**
+1. Install the extension
+2. Press Ctrl+Shift+P -> Preferences: File Icon Theme
+3. Select "Veldora Icons"
